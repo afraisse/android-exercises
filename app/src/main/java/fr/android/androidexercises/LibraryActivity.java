@@ -2,6 +2,9 @@ package fr.android.androidexercises;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -19,8 +22,12 @@ public class LibraryActivity extends AppCompatActivity {
 
         List<Book> books = getBooks();
 
-        ListView listView = (ListView) findViewById(R.id.bookListView);
-        listView.setAdapter(new BookAdapter(this, books));
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyler_view);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+
+        RecyclerView.Adapter recyclerAdapter = new BookRecyclerAdapter(this, books);
+        recyclerView.setAdapter(recyclerAdapter);
+
         // TODO findViewById() and setAdapter()
     }
 
