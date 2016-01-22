@@ -4,6 +4,6 @@
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="action_login">log me in</string>
-    <string name="text_logged">Your are logged in.</string>
-    <string name="notLogged">Your aren\'t logged.</string>
+    <string name="text_logged">You are logged in.</string>
+    <string name="notLogged">You aren\'t logged.</string>
 </resources>
