@@ -15,6 +15,7 @@ public class LoginActivityTest extends ActivityInstrumentationTestCase2<LoginAct
         getActivity();
     }
 
+
     public void takeScreenshot(String name) {
         //Spoon.screenshot(getCurrentActivity(), name);
     }
