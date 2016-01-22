@@ -7,6 +7,16 @@ public class Book {
     private String price;
     private String cover;
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "isbn='" + isbn + '\'' +
+                ", title='" + title + '\'' +
+                ", price='" + price + '\'' +
+                ", cover='" + cover + '\'' +
+                '}';
+    }
+
     public String getIsbn() {
         return isbn;
     }
