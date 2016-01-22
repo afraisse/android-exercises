@@ -23,7 +23,7 @@ public class LibraryActivity extends AppCompatActivity {
         List<Book> books = getBooks();
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyler_view);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, getResources().getBoolean(R.bool.landscape) ? 2: 1));
 
         RecyclerView.Adapter recyclerAdapter = new BookRecyclerAdapter(this, books);
         recyclerView.setAdapter(recyclerAdapter);
